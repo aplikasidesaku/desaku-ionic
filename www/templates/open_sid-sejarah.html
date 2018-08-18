@@ -1,0 +1,26 @@
+	<ion-view view-title="Sejarah Desa" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-sejarah" class=" page-sejarah">
+		
+			<!-- code refresh -->
+			<ion-refresher pulling-text="{{ 'Pull to refresh...' | translate }}"  on-refresh="doRefresh()"></ion-refresher>
+			<!-- ./code refresh -->
+			
+
+			<!-- code listing -->
+
+			<div class="list">
+				<div class="item item-text-wrap" ng-repeat="item in data_sejarahs | limitTo:50:0"   >
+					<h1 ng-bind-html="item.judul | to_trusted"></h1>
+					<div class="to_trusted {{ fontsize }}" ng-bind-html="item.isi | strHTML"></div>
+				</div>
+			</div>
+
+			<!-- ./code listing -->
+
+
+
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

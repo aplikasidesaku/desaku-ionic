@@ -1,0 +1,59 @@
+	<ion-view view-title="Menu" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-slide_tab_menu" class=" page-slide_tab_menu">
+		
+	<div style="width: 100%;height:100%;">
+		<ion-slide-box class="ion-slide-tabs" slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
+			<ion-slide ion-slide-tab-label="Dashboard" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-href="#/open_sid/berita" >
+								<i class="icon ion-ios-paper-outline" ></i>
+								<h2>{{ "Berita" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/open_sid/agenda" >
+								<i class="icon ion-android-calendar" ></i>
+								<h2>{{ "Agenda" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/open_sid/peraturan" >
+								<i class="icon ion-gear-a" ></i>
+								<h2>{{ "Peraturan Desa" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/open_sid/lapor" >
+								<i class="icon ion-speakerphone" ></i>
+								<h2>{{ "Lapor" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+			<ion-slide ion-slide-tab-label="Profile Desa" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-href="#/open_sid/sejarah" >
+								<i class="icon ion-ios-cog-outline" ></i>
+								<h2>{{ "Sejarah Desa" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/open_sid/visimisi" >
+								<i class="icon ion-android-checkbox" ></i>
+								<h2>{{ "Visi Misi" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/open_sid/pemerintah" >
+								<i class="icon ion-flash-off" ></i>
+								<h2>{{ "Pemerintah Desa" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+		</ion-slide-box>
+	</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

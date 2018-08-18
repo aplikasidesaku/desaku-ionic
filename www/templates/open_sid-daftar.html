@@ -1,0 +1,28 @@
+	<ion-view view-title="daftar" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-daftar" class=" page-daftar">
+				<div class="list list"  >
+			<form ng-submit="submitUser()">
+
+			<!-- input nik -->
+			<ion-md-input ng-model="form_user.nik" name="nik" placeholder="Nik" highlight-color="energized" type="number" ng-required="true"></ion-md-input>
+			<!-- ./input nik -->
+
+			<!-- input pin -->
+			<ion-md-input ng-model="form_user.pin" name="pin" placeholder="Pin" highlight-color="energized" type="number" ng-required="true"></ion-md-input>
+			<!-- ./input pin -->
+
+			<!-- input submit -->
+			<div class="item item-button noborder">
+				<button class="button button-assertive ink">submit</button>
+                <a ui-sref="open_sid.login" class="button button-calm ink">Login</a>
+			</div>
+			<!-- ./input submit -->
+			</form>
+ 
+		</div>
+
+		<br/><br/><br/><br/>
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

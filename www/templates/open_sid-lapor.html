@@ -1,0 +1,24 @@
+	<ion-view view-title="Lapor" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-lapor" class="page-lapor">
+		<div class="card list">
+ 
+
+  
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Lapor</span>
+    <input type="hidden" ng-model="current_user.nik" ng-value="current_user.nik">
+    <input type="text" ng-model="current_user.lapor" ng-value="current_user.lapor">
+  </label>
+
+ 
+
+   <div class="item item-button noborder">
+				<button ng-click="submitLapor(current_user)" class="button button-assertive ink">Submit</button>
+			</div>
+        
+</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

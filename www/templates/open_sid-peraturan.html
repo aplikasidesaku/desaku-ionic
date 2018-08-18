@@ -1,0 +1,50 @@
+	<ion-view view-title="Peraturan Desa" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-peraturan" class=" page-peraturan">
+		
+			<!-- code refresh -->
+			<ion-refresher pulling-text="{{ 'Pull to refresh...' | translate }}"  on-refresh="doRefresh()"></ion-refresher>
+			<!-- ./code refresh -->
+			
+
+			<!-- code search -->
+			<ion-list class="list" >
+				<div class="item item-input">
+					<i class="icon ion-search placeholder-icon"></i>
+					<input type="search" ng-model="filter_peraturans" placeholder="{{ 'Search' | translate }}" aria-label="filter peraturans" />
+				</div>
+			</ion-list>
+			<!-- ./code search -->
+
+
+			<!-- code listing -->
+			<div class="list animate-none">
+				<a class="item item-thumbnail-left item-text-wrap" ng-repeat="item in peraturans | filter:filter_peraturans as results" ng-init="$last ? fireEvent() : null" href="#/open_sid/peraturan_singles/{{item.id}}">
+					<img alt="" class="full-image" ng-src="{{item.gambar}}" />
+					<h3 class=""  ng-bind-html="item.judul | to_trusted"></h3>
+				</a>
+			</div>
+			<!-- ./code listing -->
+
+
+			<!-- code infinite scroll -->
+			<ion-list class="list">
+				<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="onInfinite()" distance="5px" ng-if="hasMoreData"></ion-infinite-scroll>
+			</ion-list>
+			<!-- ./code infinite scroll -->
+
+
+			<!-- code search result not found -->
+			<ion-list class="list">
+				<div class="item" ng-if="results.length == 0" >
+					<p>{{ 'No results found...!' | translate }} </p>
+				</div>
+			</ion-list>
+			<!-- code search result not found -->
+
+
+
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

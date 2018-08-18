@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="id.web.desaku" version="1.0.180817" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<name>Open SID</name>
+	<description>Aplikasi Android Open SID</description>
+	<author email="develop@sasweblabs.com" href="https://desaku.web.id">Sasweblabs</author>
+	<content src="index.html" />
+	<!-- Network Request Whitelist -->
+	<access origin="*" />
+	<platform name="android">
+		<access origin="market:*" launch-external="yes"/>
+		<access origin="tel:*" launch-external="yes"/>
+		<access origin="geo:*" launch-external="yes"/>
+		<access origin="mailto:*" launch-external="yes"/>
+		<access origin="sms:*" launch-external="yes"/>
+		<access origin="whatsapp:*" launch-external="yes"/>
+		<access origin="line:*" launch-external="yes"/>
+		<access origin="twitter:*" launch-external="yes"/>
+		<access origin="fb:*" launch-external="yes"/>
+		<access origin="fbapi20130214:*" launch-external="yes"/>
+		<access origin="skype:*" launch-external="yes"/>
+	</platform>
+	<!-- Navigation Whitelist -->
+	<allow-navigation href="http://*/*" />
+	<allow-navigation href="https://*/*" />
+	<allow-navigation href="data:*" />
+	<allow-navigation href="file:*" />
+	<allow-navigation href="http://localhost:8080/*"/>
+	<!-- Intent Whitelist -->
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	<allow-intent href="rtsp://*" />
+	<allow-intent href="rtmp://*" />
+	<allow-intent href="rtp://*" />
+	<allow-intent href="udp://*" />
+	<allow-intent href="file://*" />
+	<allow-intent href="tel:*" />
+	<allow-intent href="sms:*" />
+	<allow-intent href="mms:*" />
+	<allow-intent href="mailto:*" />
+	<allow-intent href="geo:*" />
+	<allow-intent href="whatsapp:*" />
+	<allow-intent href="line:*" />
+	<allow-intent href="twitter:*" />
+	<allow-intent href="fb:*" />
+	<allow-intent href="fbapi20130214:*" />
+	<allow-intent href="skype:*" />
+	<platform name="android">
+		<allow-intent href="market:*" />
+	</platform>
+	<platform name="ios">
+		<allow-intent href="itms:*" />
+		<allow-intent href="itms-apps:*" />
+	</platform>
+	<preference name="webviewbounce" value="false"/>
+	<preference name="UIWebViewBounce" value="false"/>
+	<preference name="DisallowOverscroll" value="true"/>
+	<preference name="SplashScreenDelay" value="500"/>
+	<preference name="FadeSplashScreenDuration" value="1000"/>
+	<preference name="android-minSdkVersion" value="16"/>
+	<preference name="BackupWebStorage" value="none"/>
+	<preference name="SplashScreen" value="screen"/>
+	<preference name="StatusBarOverlaysWebView" value="true" />
+	<preference name="StatusBarStyle" value="lightcontent" />
+	<platform name="android">
+		<preference name="loadUrlTimeoutValue" value="20000" />
+		<preference name="ErrorUrl" value="file:///android_asset/www/retry.html" />
+		<preference name="LoadingDialog" value="Start...,Please wait..." />
+	</platform>
+	<platform name="ios">
+		<preference name="ErrorUrl" value="Application Error" />
+	</platform>
+	<feature name="StatusBar">
+		<param name="ios-package" onload="true" value="CDVStatusBar"/>
+	</feature>
+	<!-- default -->
+	<plugin name="cordova-plugin-device" />
+	<plugin name="cordova-plugin-console" />
+	<plugin name="cordova-plugin-whitelist" />
+	<plugin name="cordova-plugin-splashscreen" />
+	<plugin name="cordova-plugin-statusbar" />
+	<plugin name="ionic-plugin-keyboard" />
+	<!-- ./default -->
+	<plugin name="cordova-plugin-inappbrowser" />
+	<platform name="android">
+		<icon qualifier="ldpi" src="www/res/icon/android/ldpi-icon.png" />
+		<icon qualifier="mdpi" src="www/res/icon/android/mdpi-icon.png" />
+		<icon qualifier="hdpi" src="www/res/icon/android/hdpi-icon.png" />
+		<icon qualifier="xhdpi" src="www/res/icon/android/xhdpi-icon.png" />
+		<icon qualifier="xxhdpi" src="www/res/icon/android/xxhdpi-icon.png" />
+		<icon qualifier="xxxhdpi" src="www/res/icon/android/xxxhdpi-icon.png" />
+		<!-- not support using custom source -->
+		<splash density="ldpi" src="www/res/screen/android/ldpi.png" />
+		<splash density="mdpi" src="www/res/screen/android/mdpi.png" />
+		<splash density="hdpi" src="www/res/screen/android/hdpi.png" />
+		<splash density="xhdpi" src="www/res/screen/android/xhdpi.png" />
+		<splash density="xxhdpi" src="www/res/screen/android/xxhdpi.png" />
+		<splash density="xxxhdpi" src="www/res/screen/android/xxxhdpi.png" />
+		<!-- ./not support using custom source -->
+	</platform>
+	<platform name="ios">
+	</platform>
+	<preference name="phonegap-version" value="cli-8.0.0" />
+</widget>

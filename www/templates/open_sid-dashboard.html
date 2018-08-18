@@ -1,0 +1,74 @@
+	<ion-view view-title="Dashboard" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-dashboard" class=" page-dashboard">
+				<!-- code slide hero -->
+		<div class="assertive-900-bg slide-box-hero" ng-controller="beritaCtrl">
+			<ion-slides class="slide-box-hero-content" options="{slidesPerView:1,autoplay:10000,loop:1}" slider="data.slider">
+				<ion-slide-page class="slide-box-hero-item" ng-repeat="item in data_beritas | limitTo : 10:0" >
+				<div class="slide-box-hero-container" style="background: url('{{item.gambar}}') no-repeat center center;">
+					<div class="padding caption">
+						<h2 ng-bind-html="item.judul | strHTML"></h2>
+						<a ng-href="#/open_sid/berita_singles/{{item.id}}">Selengkapnya ></a>
+					</div>
+				</div>
+				</ion-slide-page>
+			</ion-slides>
+		</div>
+		<!-- ./code slide hero -->
+
+
+	<div style="width: 100%;height:100%;">
+		<ion-slide-box class="ion-slide-tabs" slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
+			<ion-slide ion-slide-tab-label="Dashboard" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-href="#/open_sid/berita"  >
+								<i class="icon ion-ios-paper-outline" ></i>
+								<h2 class="biru">{{ "Berita" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/open_sid/agenda" >
+								<i class="icon ion-android-calendar" ></i>
+								<h2 class="biru">{{ "Agenda" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/open_sid/peraturan" >
+								<i class="icon ion-gear-a" ></i>
+								<h2 class="biru">{{ "Peraturan Desa" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/open_sid/lapor" >
+								<i class="icon ion-speakerphone" ></i>
+								<h2 class="biru">{{ "Lapor" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+			<ion-slide ion-slide-tab-label="Profile Desa" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-href="#/open_sid/sejarah" >
+								<i class="icon ion-ios-cog-outline" ></i>
+								<h2 class="orange">{{ "Sejarah Desa" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/open_sid/visimisi" >
+								<i class="icon ion-android-checkbox" ></i>
+								<h2 class="orange">{{ "Visi Misi" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/open_sid/pemerintah" >
+								<i class="icon ion-flash-off" ></i>
+								<h2 class="orange">{{ "Pemerintah Desa" | translate }}</h2>
+								<span class="item-note pull-left"></span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+		</ion-slide-box>
+	</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

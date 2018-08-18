@@ -1,0 +1,22 @@
+	<ion-view view-title="Login" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-login" class=" page-login">
+			<div class="hero no-header flat" >
+    <div class="content">
+        
+        <h2>Desaku</h2>
+    </div>
+</div>
+
+<div class="list">
+    <ion-md-input autocomplete="off" placeholder="NIK" name="nik" highlight-color="balanced" type="text" ng-model="form_user.nik" ng-required="true"></ion-md-input>
+    <ion-md-input autocomplete="off" placeholder="PIN" name="pin" highlight-color="energized" type="password" ng-model="form_user.pin" ng-required="true"></ion-md-input>
+</div>
+
+<div class="padding">
+    <button ng-click="submitUser(form_user)" class="button button-full button-assertive ink">Log In</button>
+    <a ui-sref="open_sid.daftar" class="button button-full button-calm ink">Daftar</a>
+</div>
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
