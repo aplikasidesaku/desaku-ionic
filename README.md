@@ -1,1 +1,2 @@
-# desaku-ionic
+# Open SID
+Aplikasi Android Open SID

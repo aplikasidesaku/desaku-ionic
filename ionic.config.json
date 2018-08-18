@@ -1,6 +1,6 @@
 
                 {
                     "name": "opensid",
-                    "app_id": "id.web.desaku",
+                    "app_id": "com.imabuilder.sasweblabs.opensid",
                     "type": "ionic1"
                 }
